@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOOKS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anontrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymousymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><h3 style="color: rgb(14, 7, 102);">LIBRARY</h3></a>
+          
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                 <%for(var i=0;i<nav.length;i++){%>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<%=nav[i].link%>" style="color:rgb(14, 7, 102) ;"><%=nav[i].title%></a>
+                            </li>
+                            
+                              <%}%></ul>
+                          </div>
+                           </nav>
+</header>
+<div class="container" id="menudiv" style="text-align: center;"> 
+<div class="row"> 
+<div class="row"> 
+<%for(i=0;i<books.length;i++){%>
+<div class="column">
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="/<%=books[i].image%>" height="300" width="300">
+<div class="card-body">
+<h5 class="card-title" >
+<%=books[i].title%><br>
+<%=books[i].author%></h5>
+
+<a href="/books/<%=books[i]._id%>">Read More</a>
+</div>
+</div>
+</div>
+<%}%>
+</div>
+</div> 
+<br>
+<button type="button" style="background-color: rgb(156, 8, 70);text-align: center;"><a href="/books/admin" style="color:white;">Add Book</a></button>
+
+<br>
+<footer class="footer-div">
+    <br>
+    <div class="container">
+  
+    
+      <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-6 footer-column">
+          <h4>About us</h4>
+          <div class="footer-menu">
+            <p>Reading books to help us learn and understand and makes us smarter, not to mention the knowledge, vocabulary and thinking skills we develop.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 footer-column">
+          <h4>Quick links</h4>
+          <ul class="footer-menu">
+            <li><a href="/register">Sign up</a></li>
+            
+           
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 footer-column">
+          <h4>Contact us</h4>
+  
+          <div class="footer-menu">
+          <p>
+             Pathanamthitta, Kerala</p>
+  
+            <p>
+             </i> tittosamthomas@gmail.com</p>
+  
+            <p>
+             </i> +91 9744728862</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-6 footer-column ">
+          <h4>Follow us</h4>
+  
+     
+          <ul class="follow">
+     <li><a  href="http://www.facebook.com" target="_blank">
+        <img src="/images/fb.jpg" width="40" height="40">
+      </a></li> 
+     
+      <li>  <a  href="http://www.twitter.com" target="_blank">
+        <img src="/images/twi.png" width="40" height="40">
+      </a></li> 
+    
+     
+      <li>   <a  href="http://www.instagram.com" target="_blank">
+        <img src="/images/insta.jpg" width="40" height="40">
+      </a></li> 
+    </ul>
+  
+        </div>
+        
+      </div>
+    </div>
+  <div class="footer-copyright text-center py-1">
+  <p> Copyright 2020. libraryApp.com. All Rights Reserved</p>
+  </div>
+  </footer>
+</body>
+</html>

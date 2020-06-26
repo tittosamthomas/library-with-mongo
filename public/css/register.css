@@ -1,0 +1,12 @@
+body
+{
+    background-color: rgb(159, 159, 161);
+    text-align:justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    background-image: url("/public/images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
